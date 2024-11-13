@@ -1,5 +1,6 @@
 # Project
-![layout](https://github.com/user-attachments/assets/0c0618f9-1b11-4d1e-bccf-13d1d956cd3e)
+
+![layout](https://github.com/user-attachments/assets/cf9ac779-e553-4934-aaa5-c686e6ab8d38)
 
 ![Screenshot 2024-11-13 224418](https://github.com/user-attachments/assets/f6b54bc6-398f-4981-bcf7-3c7d9f8325e5)
 
