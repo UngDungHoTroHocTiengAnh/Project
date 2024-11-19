@@ -42,7 +42,6 @@
 
 
 #### 3. Các yêu cầu phi chức năng (Non-functional Requirements)  
-(Chi tiết như trên, bổ sung thêm:)  
 - Từ vựng mới được đồng bộ với tài khoản người dùng để truy cập trên nhiều thiết bị.  
 - Dữ liệu từ vựng được mã hóa để đảm bảo an toàn thông tin cá nhân.  
 
