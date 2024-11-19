@@ -65,17 +65,17 @@ Chức năng Hỗ trợ học tiếng Anh cho phép người dùng quản lý t�
 - **Danh sách từ vựng**:  
   - Cột: Từ vựng, Nghĩa, Chủ đề, Ví dụ, Phát âm.  
   - Nút "Chỉnh sửa", "Xóa" hiển thị trong từng dòng.  
-  (hình minh họa)  
+ 
 
 - **Biểu mẫu thêm/chỉnh sửa từ vựng**:  
   - Các trường nhập liệu kèm nhãn rõ ràng.  
   - Nút "Lưu", "Hủy".  
-  (hình minh họa)  
+
 
 - **Giao diện học từ vựng**:  
   - Hiển thị từ vựng kèm nghĩa và ví dụ.  
   - Nút "Nghe phát âm".  
-  (hình minh họa)  
+ 
 
 #### 6. Yêu cầu tích hợp  
 - Tích hợp với hệ thống phát âm trực tuyến để lấy dữ liệu phát âm.  
