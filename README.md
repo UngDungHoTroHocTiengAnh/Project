@@ -1,104 +1,89 @@
-# Project
-
-### Chức năng: Ứng dụng hỗ trợ học tiếng Anh  
-
----
+### Chức năng: Hỗ trợ học tiếng Anh
 
 #### 1. Mô tả tổng quan  
-Ứng dụng cung cấp các công cụ đa dạng để hỗ trợ người dùng học tiếng Anh. Ngoài các chức năng học kỹ năng và làm bài kiểm tra, ứng dụng còn có tính năng học từ vựng theo chủ đề, cho phép thêm mới, chỉnh sửa và xóa từ vựng cá nhân.  
-
----
+Chức năng Hỗ trợ học tiếng Anh cho phép người dùng quản lý từ vựng bằng cách thêm, sửa, xóa các từ vựng theo chủ đề, học từ vựng thông qua giao diện thân thiện, và làm bài kiểm tra để đánh giá khả năng ghi nhớ. Đây là một phần quan trọng giúp người học cải thiện vốn từ vựng và khả năng sử dụng tiếng Anh trong thực tế.
 
 #### 2. Các yêu cầu chức năng (Functional Requirements)  
 
-**2.1 Quản lý bài học**  
-- Người dùng có thể xem danh sách các bài học theo các kỹ năng.  
-- Hệ thống cho phép tải xuống bài học hoặc đánh dấu bài học đã hoàn thành.  
-**2.2 Làm bài kiểm tra**  
-- Các dạng bài kiểm tra đa dạng: trắc nghiệm, điền từ, viết luận.  
-- Kết quả bài kiểm tra được hệ thống chấm điểm và lưu lại để người dùng xem lại tiến trình học tập.  
-**2.3 Tra từ điển**  
-- Người dùng có thể tra cứu nghĩa từ vựng, cách phát âm và ví dụ minh họa.  
-- Hỗ trợ phát âm từ bằng giọng nói chuẩn Anh-Anh hoặc Anh-Mỹ.  
+**2.1 Thêm từ vựng**  
+- Người dùng có thể thêm từ vựng mới với các thông tin sau:  
+  - **Từ vựng** (bắt buộc, duy nhất, dạng chuỗi)  
+  - **Nghĩa** (bắt buộc, dạng chuỗi)  
+  - **Chủ đề** (dropdown chọn chủ đề: Động vật, Đồ ăn, Du lịch, v.v.)  
+  - **Ví dụ câu** (tùy chọn)  
+  - **Phát âm** (tùy chọn, file âm thanh hoặc ký tự phiên âm)  
+- Hệ thống kiểm tra các trường bắt buộc và cảnh báo nếu dữ liệu không hợp lệ.  
+
+**2.2 Cập nhật từ vựng**  
+- Người dùng có thể chỉnh sửa thông tin từ vựng, bao gồm: nghĩa, chủ đề, ví dụ câu, phát âm.  
+- Hệ thống ghi nhận lịch sử cập nhật (ai cập nhật, thời gian cập nhật).  
+
+**2.3 Xóa từ vựng**  
+- Cho phép xóa từ vựng khỏi danh sách.  
+- Hiển thị cảnh báo trước khi xóa từ vựng.  
+
 **2.4 Học từ vựng theo chủ đề**  
-- Người dùng có thể chọn học từ vựng theo các chủ đề như: Gia đình, Công việc, Du lịch, v.v.  
-- Hệ thống cung cấp danh sách các từ vựng liên quan, kèm phát âm, nghĩa và ví dụ.  
-- Có chế độ ôn tập với flashcard và bài kiểm tra trắc nghiệm về từ vựng đã học.  
+- Người dùng có thể chọn một chủ đề và hệ thống hiển thị danh sách từ vựng thuộc chủ đề đó.  
+- Hỗ trợ chế độ học từ vựng:  
+  - Hiển thị từ và nghĩa.  
+  - Nghe phát âm (nếu có).  
+  - Xem ví dụ sử dụng từ.  
 
-**2.5 Thêm, sửa, xóa từ vựng**  
-- **Thêm từ vựng**:  
-  - Người dùng có thể thêm từ mới vào danh sách từ vựng cá nhân hoặc gắn vào một chủ đề.  
-  - Các thông tin cần nhập:  
-    - Từ vựng (bắt buộc)  
-    - Nghĩa (bắt buộc)  
-    - Phát âm (tùy chọn, có thể nhập tay hoặc chọn từ gợi ý).  
-    - Ví dụ sử dụng (tùy chọn).  
-
-- **Sửa từ vựng**:  
-  - Người dùng có thể cập nhật thông tin của từ vựng (nghĩa, phát âm, ví dụ) nhưng không thay đổi từ gốc.  
-
-- **Xóa từ vựng**:  
-  - Cho phép xóa từ khỏi danh sách cá nhân. Hiển thị xác nhận trước khi thực hiện.  
-
+**2.5 Làm bài kiểm tra**  
+- Hệ thống cung cấp bài kiểm tra theo hai hình thức:  
+  - **Trắc nghiệm**: Chọn nghĩa đúng cho từ vựng.  
+  - **Điền từ**: Điền từ vựng vào câu cho sẵn.  
+- Kết quả được chấm tự động và hiển thị ngay sau khi hoàn thành bài kiểm tra.  
 
 #### 3. Các yêu cầu phi chức năng (Non-functional Requirements)  
-- Từ vựng mới được đồng bộ với tài khoản người dùng để truy cập trên nhiều thiết bị.  
-- Dữ liệu từ vựng được mã hóa để đảm bảo an toàn thông tin cá nhân.  
-
----
+- Giao diện thân thiện, hỗ trợ tiếng Việt và tiếng Anh.  
+- Thời gian phản hồi khi hiển thị từ vựng hoặc kiểm tra không quá 1 giây.  
+- Ứng dụng hỗ trợ cả máy tính và thiết bị di động.  
+- Dữ liệu từ vựng được bảo mật, chỉ người dùng đăng nhập mới có quyền truy cập và chỉnh sửa.  
 
 #### 4. Quy trình hoạt động (Workflow)  
 
 **4.1 Quy trình thêm từ vựng**  
-1. Người dùng chọn chức năng "Thêm từ vựng".  
-2. Điền thông tin từ vựng (từ, nghĩa, ví dụ).  
-3. Chọn hoặc tạo mới một chủ đề liên quan.  
-4. Nhấn "Lưu".  
+1. Người dùng nhấn nút "Thêm từ vựng" trên giao diện.  
+2. Điền các thông tin yêu cầu vào biểu mẫu.  
+3. Nhấn nút "Lưu".  
+4. Hệ thống kiểm tra dữ liệu:  
+   - Nếu hợp lệ: Lưu vào cơ sở dữ liệu và hiển thị thông báo thành công.  
+   - Nếu không hợp lệ: Hiển thị lỗi cụ thể.  
 
-**4.2 Quy trình học từ vựng theo chủ đề**  
-1. Người dùng chọn một chủ đề từ danh sách.  
-2. Hệ thống hiển thị danh sách từ vựng kèm phát âm, nghĩa và ví dụ.  
-3. Người dùng có thể ôn tập qua flashcard hoặc bài kiểm tra trắc nghiệm.  
+**4.2 Quy trình học từ vựng**  
+1. Người dùng chọn chủ đề từ vựng.  
+2. Hệ thống hiển thị danh sách từ vựng theo chủ đề.  
+3. Người dùng có thể xem nghĩa, ví dụ, và nghe phát âm từng từ.  
 
-**4.3 Quy trình sửa từ vựng**  
-1. Người dùng chọn từ cần chỉnh sửa trong danh sách từ vựng.  
-2. Cập nhật các thông tin mong muốn.  
-3. Nhấn "Lưu".  
-
-**4.4 Quy trình xóa từ vựng**  
-1. Người dùng chọn từ cần xóa.  
-2. Hệ thống hiển thị thông báo xác nhận.  
-3. Nếu người dùng xác nhận, từ vựng sẽ bị xóa khỏi danh sách.  
-
----
+**4.3 Quy trình làm bài kiểm tra**  
+1. Người dùng chọn bài kiểm tra theo chủ đề.  
+2. Hệ thống hiển thị câu hỏi từng bước.  
+3. Sau khi hoàn thành, hệ thống chấm điểm và hiển thị kết quả.  
 
 #### 5. Thiết kế giao diện  
-
-- **Danh sách từ vựng theo chủ đề**:  
-  - Hiển thị các cột: Từ vựng, Nghĩa, Chủ đề, Ví dụ.  
-  - Nút "Chỉnh sửa", "Xóa" trên mỗi dòng.  
+- **Danh sách từ vựng**:  
+  - Cột: Từ vựng, Nghĩa, Chủ đề, Ví dụ, Phát âm.  
+  - Nút "Chỉnh sửa", "Xóa" hiển thị trong từng dòng.  
+  (hình minh họa)  
 
 - **Biểu mẫu thêm/chỉnh sửa từ vựng**:  
-  - Các trường nhập liệu kèm nhãn rõ ràng: Từ, Nghĩa, Chủ đề, Phát âm, Ví dụ.  
+  - Các trường nhập liệu kèm nhãn rõ ràng.  
   - Nút "Lưu", "Hủy".  
+  (hình minh họa)  
 
-- **Flashcard từ vựng**:  
-  - Hiển thị từ vựng ở mặt trước, nghĩa và ví dụ ở mặt sau.  
-  - Nút "Tiếp theo", "Quay lại".  
-
----
+- **Giao diện học từ vựng**:  
+  - Hiển thị từ vựng kèm nghĩa và ví dụ.  
+  - Nút "Nghe phát âm".  
+  (hình minh họa)  
 
 #### 6. Yêu cầu tích hợp  
-
-- **Tích hợp với module Tra từ điển** để tự động điền nghĩa và phát âm khi thêm từ vựng mới.  
-- **Tích hợp API học tập trực tuyến** để tải thêm danh sách từ vựng chủ đề nâng cao.  
-
----
+- Tích hợp với hệ thống phát âm trực tuyến để lấy dữ liệu phát âm.  
+- Hỗ trợ đồng bộ dữ liệu từ vựng với các ứng dụng học tiếng Anh khác qua API.  
 
 #### 7. Kiểm thử (Test Cases)  
-
-- Thêm từ vựng với đầy đủ thông tin.  
-- Thêm từ vựng thiếu thông tin bắt buộc, kiểm tra hiển thị lỗi.  
-- Sửa thông tin từ vựng, lưu thành công.  
-- Xóa từ vựng khỏi danh sách và kiểm tra dữ liệu được cập nhật.  
-- Học từ vựng theo chủ đề và làm bài kiểm tra trắc nghiệm.
+- Thêm từ vựng mới với đầy đủ thông tin hợp lệ.  
+- Thêm từ vựng thiếu thông tin bắt buộc (kiểm tra cảnh báo lỗi).  
+- Sửa thông tin từ vựng.  
+- Xóa từ vựng khỏi danh sách.  
+- Làm bài kiểm tra với cả hai hình thức và hiển thị kết quả chính xác.
